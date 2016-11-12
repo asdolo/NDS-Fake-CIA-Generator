@@ -1,0 +1,10 @@
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Release\ds_fake_cia_creator.frmMain.resources
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Release\ds_fake_cia_creator.Properties.Resources.resources
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Release\ds_fake_cia_creator.csproj.GenerateResource.Cache
+C:\workspace\cs\ds-false-cia\ds-false-cia\bin\Release\NDS Fake CIA Creator.exe.config
+C:\workspace\cs\ds-false-cia\ds-false-cia\bin\Release\NDS Fake CIA Creator.exe
+C:\workspace\cs\ds-false-cia\ds-false-cia\bin\Release\NDS Fake CIA Creator.pdb
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Release\NDS Fake CIA Creator.exe
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Release\NDS Fake CIA Creator.pdb
+C:\workspace\cs\ds-false-cia\ds-false-cia\bin\Release\System.Net.Http.dll
+C:\workspace\cs\ds-false-cia\ds-false-cia\bin\Release\System.Net.Http.xml

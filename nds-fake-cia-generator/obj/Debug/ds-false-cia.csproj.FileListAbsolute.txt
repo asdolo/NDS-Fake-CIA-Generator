@@ -1,0 +1,10 @@
+C:\workspace\cs\ds-false-cia\ds-false-cia\bin\Debug\ds-false-cia.exe.config
+C:\workspace\cs\ds-false-cia\ds-false-cia\bin\Debug\ds-false-cia.exe
+C:\workspace\cs\ds-false-cia\ds-false-cia\bin\Debug\ds-false-cia.pdb
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Debug\ds-false-cia.csprojResolveAssemblyReference.cache
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Debug\ds_false_cia.Properties.Resources.resources
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Debug\ds-false-cia.csproj.GenerateResource.Cache
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Debug\ds-false-cia.exe
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Debug\ds-false-cia.pdb
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Debug\ds_false_cia.frmMain.resources
+C:\workspace\cs\ds-false-cia\ds-false-cia\bin\Debug\NDS Fake CIA Creator.exe.config

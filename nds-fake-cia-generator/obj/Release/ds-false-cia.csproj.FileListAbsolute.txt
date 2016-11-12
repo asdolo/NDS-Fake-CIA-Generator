@@ -1,0 +1,3 @@
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Release\ds_fake_cia_creator.frmMain.resources
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Release\ds_fake_cia_creator.Properties.Resources.resources
+C:\workspace\cs\ds-false-cia\ds-false-cia\obj\Release\ds-false-cia.csproj.GenerateResource.Cache

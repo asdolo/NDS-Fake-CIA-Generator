@@ -1,0 +1,11 @@
+C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\bin\Debug\NDS Fake CIA Creator.exe.config
+C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\bin\Debug\NDS Fake CIA Creator.exe
+C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\bin\Debug\NDS Fake CIA Creator.pdb
+C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\bin\Debug\System.Net.Http.dll
+C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\bin\Debug\System.Net.Http.xml
+C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\obj\Debug\nds-fake-cia-generator.csprojResolveAssemblyReference.cache
+C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\obj\Debug\ds_fake_cia_creator.frmMain.resources
+C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\obj\Debug\ds_fake_cia_creator.Properties.Resources.resources
+C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\obj\Debug\nds-fake-cia-generator.csproj.GenerateResource.Cache
+C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\obj\Debug\NDS Fake CIA Creator.exe
+C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\obj\Debug\NDS Fake CIA Creator.pdb
