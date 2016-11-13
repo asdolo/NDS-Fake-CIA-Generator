@@ -1,6 +1,6 @@
 # nds-fake-cia-generator
 
-This program grabs a .nds rom dump (commercial or not) and creates a fake CIA using it's icon and name. That fake CIA will boots your slot-1 flashcart.
+This program grabs a .nds rom dump (commercial or not) and creates a fake CIA using it's icon and name. That fake CIA will boot your slot-1 flashcart.
 
 It's made by using [Apache Thunder's TWL Slot-1 Launcher](https://gbatemp.net/threads/twl-slot-1-launcher-first-custom-dsiware-app.414501/), but injecting into it the new icon and name (and also the Title ID), and then making a CIA using make_cia due to it's actually a DSiWare App.
 
