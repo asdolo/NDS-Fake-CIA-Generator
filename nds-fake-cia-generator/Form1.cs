@@ -20,42 +20,44 @@ namespace ds_fake_cia_creator
 
         private void btnConvert_Click(object sender, EventArgs e)
         {
-            OpenFileDialog asd = new OpenFileDialog();
-            asd.Filter = "NDS Files (*.nds)|*.nds|All Files|*";
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "NDS Files (*.nds)|*.nds|All Files|*";
 
-            asd.Multiselect = true;
+            openFileDialog.Multiselect = true;
 
-            if (asd.ShowDialog() == DialogResult.OK)
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string fileFolder = asd.FileName.Substring(0, asd.FileName.Length - asd.SafeFileName.Length);
+                string fileFolder = Path.GetDirectoryName(openFileDialog.FileName);
 
                 List<string> doneCIAs = new List<string>();
 
-                progressBar1.Maximum = asd.FileNames.Length;
-                progressBar1.Value = 0;
+                progressBar.Maximum = openFileDialog.FileNames.Length;
+                progressBar.Value = 0;
 
-                for (int i = 0; i < asd.FileNames.Length; ++i)
+
+                if (!Directory.Exists(Application.StartupPath + "\\temp"))
                 {
-                    label2.Text = "Processing: " + asd.SafeFileNames[i];
-                    ndsFile = asd.FileNames[i];
+                    Directory.CreateDirectory(Application.StartupPath + "\\temp");
+                }
 
-                    string safeFileNameWithOutExension = asd.SafeFileNames[i].Substring(0, asd.SafeFileNames[i].Length - 4);
-                    string extension = asd.SafeFileNames[i].Substring(asd.SafeFileNames[i].Length - 3);
+                File.WriteAllBytes(Application.StartupPath + "\\temp\\make_cia.exe", Properties.Resources.make_cia);
+                File.WriteAllBytes(Application.StartupPath + "\\temp\\ndstool.exe", Properties.Resources.ndstool);
+                File.WriteAllBytes(Application.StartupPath + "\\temp\\libstdc++-6.dll", Properties.Resources.libstdc);
+                File.WriteAllBytes(Application.StartupPath + "\\temp\\libgcc_s_sjlj-1.dll", Properties.Resources.libgcc_s_sjlj_1);
+                File.WriteAllBytes(Application.StartupPath + "\\temp\\FreeImage.dll", Properties.Resources.FreeImage);
+
+                for (int i = 0; i < openFileDialog.FileNames.Length; ++i)
+                {
+                    label2.Text = "Processing: " + openFileDialog.SafeFileNames[i];
+                    ndsFile = openFileDialog.FileNames[i];
+
+                    string safeFileNameWithOutExension = Path.GetFileNameWithoutExtension(openFileDialog.FileNames[i]);
+                    string extension = Path.GetExtension(openFileDialog.SafeFileNames[i]);
 
 
 
-                    if (extension == "nds")
+                    if (extension == ".nds")
                     {
-
-
-                        if (!Directory.Exists(Application.StartupPath + "\\temp"))
-                        {
-                            Directory.CreateDirectory(Application.StartupPath + "\\temp");
-                        }
-                        
-                        File.WriteAllBytes(Application.StartupPath + "\\temp\\make_cia.exe", Properties.Resources.make_cia);
-                        File.WriteAllBytes(Application.StartupPath + "\\temp\\ndstool.exe", Properties.Resources.ndstool);
-                        File.WriteAllBytes(Application.StartupPath + "\\temp\\libstdc++-6.dll", Properties.Resources.libstdc);
 
                         int ExitCode;
                         string error;
@@ -115,7 +117,7 @@ namespace ds_fake_cia_creator
 
                             File.Delete(Application.StartupPath + "\\temp\\banner.bin");
                           
-                            if (radioButton1.Checked)
+                            if (optDSTwo.Checked)
                             {
                                 // Supercard DSTwo
                                 temp = Properties.Resources.baseNDS;
@@ -125,7 +127,7 @@ namespace ds_fake_cia_creator
                                 temp = ReplaceByOffset(temp, pallete, 0x38220);
                                 temp = ReplaceByOffset(temp, gameNameMulti5, 0x38240);
                             }
-                            else
+                            else if (optR4i.Checked)
                             {
                                 // R4i-SDHC 3DS RTS
                                 temp = Properties.Resources.base2NDS;
@@ -139,10 +141,7 @@ namespace ds_fake_cia_creator
                             
                             
                             File.WriteAllBytes(Application.StartupPath + "\\temp\\" + safeFileNameWithOutExension + "_injected.nds", temp);
-
-                            File.Delete(Application.StartupPath + "\\temp\\ndstool.exe");
-                            File.Delete(Application.StartupPath + "\\temp\\libstdc++-6.dll");
-
+                            
 
                             ProcessInfo = new ProcessStartInfo(Application.StartupPath + "\\temp\\make_cia.exe");
                             ProcessInfo.CreateNoWindow = true;
@@ -165,11 +164,9 @@ namespace ds_fake_cia_creator
 
                             File.WriteAllBytes(fileFolder + safeFileNameWithOutExension + ".cia", temp);
 
+
                             File.Delete(Application.StartupPath + "\\temp\\" + safeFileNameWithOutExension + "_injected.nds");
                             File.Delete(Application.StartupPath + "\\temp\\" + safeFileNameWithOutExension + "_injected.cia");
-                            File.Delete(Application.StartupPath + "\\temp\\make_cia.exe");
-                            Directory.Delete(Application.StartupPath + "\\temp");
-
                             
 
                         }
@@ -196,7 +193,7 @@ namespace ds_fake_cia_creator
                             byte[] wholeBanner = SubArray(temp, formattedBannerOffset, formattedBannerSize);
 
 
-                            if (radioButton1.Checked)
+                            if (optDSTwo.Checked)
                             {
                                 // Supercard DSTwo
                                 temp = Properties.Resources.baseNDS;
@@ -204,7 +201,7 @@ namespace ds_fake_cia_creator
                                 temp = ReplaceByOffset(temp, wholeBanner, 0x038000);
                                 temp = ReplaceByOffset(temp, new byte[2] { 0xC0, 0x23 }, 0x208); //banner size
                             }
-                            else
+                            else if (optR4i.Checked)
                             {
                                 // R4i-SDHC 3DS RTS
                                 temp = Properties.Resources.base2NDS;
@@ -216,10 +213,7 @@ namespace ds_fake_cia_creator
                             
 
                             File.WriteAllBytes(Application.StartupPath + "\\temp\\" + safeFileNameWithOutExension + "_injected.nds", temp);
-
-                            File.Delete(Application.StartupPath + "\\temp\\ndstool.exe");
-                            File.Delete(Application.StartupPath + "\\temp\\libstdc++-6.dll");
-
+                            
                             ProcessInfo = new ProcessStartInfo(Application.StartupPath + "\\temp\\make_cia.exe");
                             ProcessInfo.CreateNoWindow = true;
                             ProcessInfo.WorkingDirectory = Application.StartupPath + "\\temp";
@@ -242,14 +236,12 @@ namespace ds_fake_cia_creator
                             File.Delete(Application.StartupPath + "\\temp\\" + safeFileNameWithOutExension + "_injected.nds");
                             File.Delete(Application.StartupPath + "\\temp\\" + safeFileNameWithOutExension + "_injected.cia");
                             File.Delete(Application.StartupPath + "\\temp\\base.nds");
-                            File.Delete(Application.StartupPath + "\\temp\\make_cia.exe");
-                            Directory.Delete(Application.StartupPath + "\\temp");
 
                         }
 
 
                         doneCIAs.Add(fileFolder + safeFileNameWithOutExension + ".cia");
-                        progressBar1.Value += 1;
+                        progressBar.Value += 1;
                         Application.DoEvents();
 
                         GC.Collect();
@@ -257,6 +249,13 @@ namespace ds_fake_cia_creator
 
                     }
                 }
+
+                File.Delete(Application.StartupPath + "\\temp\\ndstool.exe");
+                File.Delete(Application.StartupPath + "\\temp\\libstdc++-6.dll");
+                File.Delete(Application.StartupPath + "\\temp\\libgcc_s_sjlj-1.dll");
+                File.Delete(Application.StartupPath + "\\temp\\FreeImage.dll");
+                File.Delete(Application.StartupPath + "\\temp\\make_cia.exe");
+                Directory.Delete(Application.StartupPath + "\\temp");
 
                 label2.Text = "";
 
@@ -333,18 +332,8 @@ namespace ds_fake_cia_creator
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("https://gbatemp.net/members/asdolo.389539/");
+            System.Diagnostics.Process.Start("https://github.com/Asdolo?tab=repositories");
         }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://gbatemp.net/members/robz8.263852/");
-        }
-
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

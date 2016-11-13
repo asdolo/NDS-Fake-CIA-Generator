@@ -8,3 +8,13 @@ C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\obj\Release\ds_fak
 C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\obj\Release\nds-fake-cia-generator.csproj.GenerateResource.Cache
 C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\obj\Release\NDS Fake CIA Creator.exe
 C:\workspace\cs\NDS Fake CIA Generator\nds-fake-cia-generator\obj\Release\NDS Fake CIA Creator.pdb
+C:\workspace\cs\NDS-Fake-CIA-Generator\nds-fake-cia-generator\bin\Release\NDS Fake CIA Creator.exe.config
+C:\workspace\cs\NDS-Fake-CIA-Generator\nds-fake-cia-generator\obj\Release\NDS Fake CIA Creator.exe
+C:\workspace\cs\NDS-Fake-CIA-Generator\nds-fake-cia-generator\obj\Release\NDS Fake CIA Creator.pdb
+C:\workspace\cs\NDS-Fake-CIA-Generator\nds-fake-cia-generator\bin\Release\NDS Fake CIA Creator.exe
+C:\workspace\cs\NDS-Fake-CIA-Generator\nds-fake-cia-generator\bin\Release\NDS Fake CIA Creator.pdb
+C:\workspace\cs\NDS-Fake-CIA-Generator\nds-fake-cia-generator\bin\Release\System.Net.Http.dll
+C:\workspace\cs\NDS-Fake-CIA-Generator\nds-fake-cia-generator\bin\Release\System.Net.Http.xml
+C:\workspace\cs\NDS-Fake-CIA-Generator\nds-fake-cia-generator\obj\Release\ds_fake_cia_creator.frmMain.resources
+C:\workspace\cs\NDS-Fake-CIA-Generator\nds-fake-cia-generator\obj\Release\ds_fake_cia_creator.Properties.Resources.resources
+C:\workspace\cs\NDS-Fake-CIA-Generator\nds-fake-cia-generator\obj\Release\nds-fake-cia-generator.csproj.GenerateResource.Cache

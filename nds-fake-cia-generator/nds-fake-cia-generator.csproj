@@ -101,7 +101,6 @@
     </Compile>
     <None Include="Resources\base.nds" />
     <None Include="Resources\base2.nds" />
-    <None Include="Resources\twl-dstwo.nds" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -120,6 +119,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\libgcc_s_sjlj-1.dll" />
+    <None Include="Resources\FreeImage.dll" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

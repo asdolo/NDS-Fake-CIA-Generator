@@ -83,6 +83,26 @@ namespace ds_fake_cia_creator.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] FreeImage {
+            get {
+                object obj = ResourceManager.GetObject("FreeImage", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] libgcc_s_sjlj_1 {
+            get {
+                object obj = ResourceManager.GetObject("libgcc_s_sjlj_1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] libstdc {
             get {
                 object obj = ResourceManager.GetObject("libstdc", resourceCulture);

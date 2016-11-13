@@ -124,6 +124,12 @@
   <data name="baseNDS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\base.nds;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="FreeImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FreeImage.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libgcc_s_sjlj_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\libgcc_s_sjlj-1.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="libstdc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\libstdc++-6.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
